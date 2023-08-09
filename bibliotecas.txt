@@ -1,0 +1,9 @@
+bcryptjs - gerar senhas, criptografar e descriptografar
+connect-flash - para flash messages
+cookie-parser e cookie-session - para gerar uma sessão na máquina do usuário
+express
+express-flash - para flash messages tbm
+express-session - para autenticação
+mysql2 e sequelize - banco
+nodemon - para utilização no modo dev
+session-file-store - para salvar e manter sessões do usuário

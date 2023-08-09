@@ -1,0 +1,25 @@
+<div class="dashboard">
+  <div class="title-container">
+    <h2>Dashboard</h2>
+    <a href="/tips/add" class="btn">Criar Tip</a>
+  </div>
+  <h3>Suas Tips:</h3>
+  <ul>
+    {{#each tips}}
+    <li>
+      <span class="label">{{this.title}}</span>
+      <span class="actions">
+        <a href="/tips/edit/{{this.id}}" class="btn">Editar</a>
+        <form action="/tips/remove" method="POST">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <input type="submit" value="Excluir" class="btn">
+        </form>
+      </span>
+    </li>
+    {{/each}}
+  </ul>
+      {{#if emptyTips}}
+        <p>Ainda não há nenhuma tip cadastrada, crie a sua <a href="/tips/add">clicando aqui</a></p>
+    {{/if}}
+
+</div>
